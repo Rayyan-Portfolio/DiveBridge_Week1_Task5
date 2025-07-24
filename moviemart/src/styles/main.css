@@ -118,3 +118,13 @@ body {
 .list-group-item {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+@media (max-width: 576px) {
+  .navbar form {
+    margin-top: 0.5rem;
+  }
+}
+
+.text-force-white {
+  color: #fff !important;
+}

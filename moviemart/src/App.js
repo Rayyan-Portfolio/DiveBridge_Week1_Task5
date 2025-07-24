@@ -63,10 +63,14 @@ function App() {
         cartCount={totalCartCount}
         toggleTheme={toggleTheme}
         theme={theme}
+        onSearch={(query) => console.log("Searching for:", query)}
       />
       <div className="pt-5 mt-4">
         <Routes>
-          <Route path="/" element={<Home addToCart={addToCart} />} />
+          <Route
+            path="/"
+            element={<Home addToCart={addToCart} theme={theme} />}
+          />
           <Route
             path="/cart"
             element={
@@ -81,6 +85,7 @@ function App() {
             path="/search"
             element={<SearchResults addToCart={addToCart} />}
           />
+
           <Route
             path="/movie/:id"
             element={<MovieDetails addToCart={addToCart} />}
