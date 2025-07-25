@@ -7,6 +7,10 @@ import Home from "./pages/Home";
 import Cart from "./pages/Cart";
 import MovieDetails from "./pages/MovieDetails";
 import SearchResults from "./pages/SearchResults";
+import Checkout from "./pages/Checkout";
+import Payment from "./pages/Payment";
+import OrderConfirmation from "./pages/OrderConfirmation";
+import AdminDashboard from "./pages/AdminDashboard";
 
 function App() {
   // Theme toggle state
@@ -81,6 +85,24 @@ function App() {
               />
             }
           />
+          {/* <Route path="/checkout" element={<Checkout />} /> */}
+          {/* <Route
+            path="/checkout"
+            element={<Checkout cartItems={cartItems} />}
+          /> */}
+          <Route
+            path="/checkout"
+            element={
+              <Checkout
+                cartItems={cartItems}
+                setCartItems={setCartItems} // ✅ pass setter too
+              />
+            }
+          />
+          <Route path="/admin" element={<AdminDashboard />} />
+
+          <Route path="/payment" element={<Payment />} />
+          <Route path="/order-confirmation" element={<OrderConfirmation />} />
           <Route
             path="/search"
             element={<SearchResults addToCart={addToCart} />}

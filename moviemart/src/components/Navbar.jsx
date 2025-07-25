@@ -492,6 +492,12 @@ const Navbar = ({ cartCount, toggleTheme, theme }) => {
           </li>
 
           <li className="nav-item me-2">
+            <Link to="/admin" className="nav-link">
+              Admin
+            </Link>
+          </li>
+
+          <li className="nav-item me-2">
             <button
               className="btn btn-sm btn-outline-light"
               onClick={toggleTheme}
